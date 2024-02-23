@@ -1,4 +1,4 @@
-# The Frontend of Config Management API 
+# The Frontend of the Config Management API 
 
 ## Description
 
