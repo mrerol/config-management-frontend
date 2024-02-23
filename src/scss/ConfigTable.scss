@@ -1,0 +1,67 @@
+// Common styles for table and card
+.table.table-borderless> :not(caption)>*>* {
+  background-color: #1e1e2a !important;
+  color: #cccccf;
+}
+
+.table.table-borderless thead th {
+  color: #778ba3 !important;
+  font-size: 22px;
+}
+
+@media (max-width: 768px) {
+  .table thead {
+    display: none;
+  }
+
+  .table,
+  .table tbody,
+  .table tr,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+
+  .table tr {
+    margin-bottom: 15px;
+    border: 2px white solid;
+    border-radius: 20px;
+  }
+
+  .table td {
+    border: 0 #1e1e2a solid;
+    border-radius: 20px;
+  }
+
+  .table tbody tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .table tbody tr td {
+    flex-basis: 100%;
+    padding: 3px;
+    position: relative;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    position: relative;
+    left: 0;
+    width: 100%;
+    padding-left: 15px;
+    font-weight: bold;
+  }
+
+  .table tbody tr td:last-child {
+    text-align: center;
+  }
+
+  .table tbody tr td::after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    width: 1px;
+  }
+}

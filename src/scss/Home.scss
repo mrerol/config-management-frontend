@@ -1,0 +1,19 @@
+.navbar {
+  background-color: #1e1e2a;
+}
+
+.logo-img {
+  max-height: 30px;
+  margin-right: 10px;
+}
+
+.profile-img {
+  max-height: 30px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateX(-80%);
+}
