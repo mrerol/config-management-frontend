@@ -12,6 +12,7 @@ This project is designed to interact with [Config Management API](https://github
     "bootstrap": "^5.3.2",
     "firebase": "^10.7.1",
     "pinia": "^2.1.7",
+    "serve": "^14.2.1",
     "vue": "^3.3.11",
     "vue-cookie-next": "^1.3.0",
     "vue-router": "^4.2.5"
@@ -20,7 +21,7 @@ This project is designed to interact with [Config Management API](https://github
     "@vitejs/plugin-vue": "^4.5.2",
     "sass": "^1.69.5",
     "vite": "^5.1.4"
-  },
+  }
 ```
 
 ## Environment Variables
@@ -51,3 +52,7 @@ This the sign-in page: (Endpoint: /signin)
 
 This is the config list page: (Endpoint: /)
 ![Config List](./screenshots/config-list.png)
+
+## Deployment
+
+The application has been deployed to the [Heroku](https://config-management-frontend-f010e658b588.herokuapp.com/).
