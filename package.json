@@ -4,8 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "start": "npm start",
-    "build": "npm start build"
+    "start": "npm start"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
