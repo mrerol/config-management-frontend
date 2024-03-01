@@ -66,10 +66,10 @@ export default {
         alert("Configuration updated successfully");
         this.$emit("configEdited", this.config)
       } catch (error) {
-        if (error.response.data.message === 'Conflict: Document has been modified by another transaction.') {
-          alert('Conflict: Another user has updated the configuration. Please refresh and try again.');
+        if (error.response.data.message === 'conflict') {
+          alert('Conflict: Another user has updated the configuration.\nPlease, try again.');
         } else {
-          alert("Error updating configuration. Please try again.");
+          alert("Error updating configuration.\nPlease, try again.");
         }
       }
     }
