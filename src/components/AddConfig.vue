@@ -21,7 +21,7 @@
 
 <script>
 
-import ConfigService from "../services/configService";
+import ConfigService from "../services/configService.js";
 
 export default {
   data() {

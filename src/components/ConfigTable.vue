@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import ConfigService from "../services/configService";
+import ConfigService from "../services/configService.js";
 import DeleteConfigModal from "./DeleteConfigModal.vue";
 import EditConfigModal from "./EditConfigModal.vue";
 import AddConfig from "./AddConfig.vue";

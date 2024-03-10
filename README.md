@@ -27,7 +27,9 @@ This project is designed to interact with [Config Management API](https://github
 ## Environment Variables
 ```bash
 VITE_FIREBASE_CONFIG=
-VITE_API_URL=
+VITE_API_URL=http://localhost:3001
+VITE_CHECK_LOCK_INTERVAL=1000
+VITE_CHECK_LOCK_TIMEOUT=60000
 ```
 
 Place these variables in the ```.env``` file in the same directory as ```App.vue```.
@@ -35,6 +37,10 @@ Place these variables in the ```.env``` file in the same directory as ```App.vue
 - ```VITE_FIREBASE_CONFIG``` represents the settings for the Firebase database.
 
 - ```VITE_API_URL``` is the endpoint for backend api.
+
+- ```VITE_CHECK_LOCK_INTERVAL``` is the interval for checking document lock.
+
+- ```VITE_CHECK_LOCK_TIMEOUT``` is the timeout for checking document lock.
 
 ## Installation
 

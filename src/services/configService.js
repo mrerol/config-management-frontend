@@ -1,6 +1,7 @@
 import axiosInstance from "../helpers/axiosInstance.js";
 
 const ConfigService = {
+
     async list() {
         try {
             const response = await axiosInstance.get(`/get`);
@@ -13,6 +14,20 @@ const ConfigService = {
             throw error;
         }
     },
+
+    async getById(id) {
+        try {
+            const response = await axiosInstance.get(`/get/${id}`);
+            if (response.data.status === "OK") {
+                return response.data.data;
+            } else {
+                throw new Error(response.data.message);
+            }
+        } catch (error) {
+            throw error;
+        }
+    },
+
     async add(data) {
         try {
             const response = await axiosInstance.post(`/add`, data);
@@ -25,6 +40,7 @@ const ConfigService = {
             throw error;
         }
     },
+
     async update(id, data) {
         try {
             const response = await axiosInstance.put(`/update/${id}`, data);
@@ -37,6 +53,7 @@ const ConfigService = {
             throw error;
         }
     },
+
     async delete(id) {
         try {
             const response = await axiosInstance.delete(`/delete/${id}`);
@@ -49,6 +66,19 @@ const ConfigService = {
             throw error;
         }
     },
+
+    async checkLockByConfigId(id) {
+        try {
+            const response = await axiosInstance.get(`/check-lock/${id}`);
+            if (response.data.status === "OK") {
+                return response.data.data.lock;
+            } else {
+                throw new Error(response.data.message);
+            }
+        } catch (error) {
+            throw error;
+        }
+    }
 };
 
 export default ConfigService;
