@@ -22,7 +22,7 @@
               <input v-model="config.description" :disabled="isLocked" type="text" class="form-control" required />
             </div>
             <div class="mt-2">
-              <button type="submit" class="btn btn-primary me-2" @click="closeModal">
+              <button type="submit" :disabled="isLocked" class="btn btn-primary me-2" @click="closeModal">
                 Save
               </button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" @click="closeModal">
@@ -102,7 +102,7 @@ export default {
           updatedAt: this.config.updatedAt,
         });
         alert("Configuration updated successfully");
-        this.$emit("configEdited", this.config)
+        this.$emit("configEdited", this.config);
       } catch (error) {
         if (error.response.data.message === 'conflict') {
           alert('Conflict: Another user has updated the configuration.\nPlease, try again.');

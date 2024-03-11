@@ -77,8 +77,7 @@ export default {
       this.$refs.deleteModal.assignDataToDeleteModal(id);
     },
     openEditModal(config) {
-      const newConfigObject = { ...config };
-      this.$refs.editModal.assignDataToEditModal(newConfigObject);
+      this.$refs.editModal.assignDataToEditModal(config);
     },
     handleConfigDeleted(deletedConfigId) {
       this.configs = this.configs.filter((config) => config.id !== deletedConfigId);
