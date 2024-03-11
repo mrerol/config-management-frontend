@@ -64,6 +64,7 @@ export default {
   watch: {
     async isLocked(newVal, oldVal) {
       this.config = await ConfigService.getById(this.config.id);
+      this.$emit("configEdited", this.config);
       console.log('Config updated by id: ' + this.config.id);
     },
   },

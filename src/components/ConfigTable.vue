@@ -76,8 +76,12 @@ export default {
     openDeleteModal(id) {
       this.$refs.deleteModal.assignDataToDeleteModal(id);
     },
-    openEditModal(config) {
+    async openEditModal(config) {
+      config = await ConfigService.getById(config.id);
       this.$refs.editModal.assignDataToEditModal(config);
+      this.configs = this.configs.map((cfg) =>
+      cfg.id === config.id ? config : cfg
+      );
     },
     handleConfigDeleted(deletedConfigId) {
       this.configs = this.configs.filter((config) => config.id !== deletedConfigId);
